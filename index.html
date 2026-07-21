@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>🇧🇷 브라질 여행 · 놀와 6-1반 카드뉴스</title>
+<meta name="description" content="놀와 6-1반이 준비한 브라질 여행 카드뉴스">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://ko.wikipedia.org" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link rel="preconnect" href="https://www.openstreetmap.org" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 상단 진행 바 -->
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- 우측 세로 내비게이션 -->
+<nav class="dot-nav" id="dotNav" aria-label="카드 이동 내비게이션">
+  <button class="dot" data-index="0" aria-label="1번 카드로 이동"><span>소개</span></button>
+  <button class="dot" data-index="1" aria-label="2번 카드로 이동"><span>재미</span></button>
+  <button class="dot" data-index="2" aria-label="3번 카드로 이동"><span>일정</span></button>
+  <button class="dot" data-index="3" aria-label="4번 카드로 이동"><span>미식·쇼핑</span></button>
+  <button class="dot" data-index="4" aria-label="5번 카드로 이동"><span>꿀팁</span></button>
+  <button class="dot" data-index="5" aria-label="6번 카드로 이동"><span>팝업</span></button>
+</nav>
+
+<!-- 좌측 하단 홈 버튼 / 페이지 인디케이터 -->
+<div class="corner-ui bottom-left">
+  <button class="pill-btn" id="homeBtn" aria-label="처음으로 이동">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+    <span>홈</span>
+  </button>
+  <div class="page-indicator" id="pageIndicator" aria-hidden="true">01<span class="slash">/</span>06</div>
+</div>
+
+<!-- 우측 하단 이전/다음 -->
+<div class="corner-ui bottom-right">
+  <button class="pill-btn" id="prevBtn" aria-label="이전 카드">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    <span>이전</span>
+  </button>
+  <button class="pill-btn primary" id="nextBtn" aria-label="다음 카드">
+    <span>다음</span>
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+</div>
+
+<!-- 맨 위로 -->
+<button class="scroll-top" id="scrollTopBtn" aria-label="맨 위로 이동">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+</button>
+
+<main class="deck" id="deck">
+
+  <!-- ============================================================ -->
+  <!-- CARD 1 — 브라질은 어떤 곳일까? -->
+  <!-- ============================================================ -->
+  <section class="card card--01" id="card-0" data-title="브라질은 어떤 곳일까?" data-accent="gold">
+    <div class="bg-collage bg-collage--three">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1663409808740-b87ab111f4dd?q=65&w=1000&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1662319895005-ad0a23a32832?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1630410139620-15d3a0791a5b?q=65&w=900&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--cover"></div>
+
+    <div class="content content--cover">
+      <div class="stamp" data-reveal="zoom">
+        <svg viewBox="0 0 120 120" class="stamp-ring">
+          <path id="stampCirclePath1" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+          <text><textPath href="#stampCirclePath1" startOffset="0%">BRASIL · VIAGEM · BRASIL · VIAGEM ·</textPath></text>
+        </svg>
+        <span class="stamp-center">🇧🇷</span>
+      </div>
+
+      <p class="eyebrow" data-reveal="fade">TRAVEL CARD NEWS · BRAZIL</p>
+      <h1 class="hero-title" data-reveal="text">
+        <span class="line">브라질</span>
+        <span class="line accent-text">여행</span>
+      </h1>
+      <p class="hero-sub" data-reveal="fade">브라질은 어떤 곳일까?</p>
+      <p class="hint-text" data-reveal="fade">카드를 눌러보면 사진과 설명이 나와요 👆</p>
+
+      <div class="info-grid" data-reveal="stagger">
+        <button type="button" class="info-chip" data-topic="flag">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="info-ico">🇧🇷</span>
+          <span class="info-label">국기</span>
+          <span class="info-val">초록·노랑·파랑 삼색기</span>
+        </button>
+        <button type="button" class="info-chip" data-map="brazil">
+          <span class="info-photo-badge" aria-hidden="true">🗺️</span>
+          <span class="info-ico">🗺️</span>
+          <span class="info-label">위치</span>
+          <span class="info-val">남아메리카 대륙</span>
+        </button>
+        <button type="button" class="info-chip" data-topic="capital">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="info-ico">🏛️</span>
+          <span class="info-label">수도</span>
+          <span class="info-val">브라질리아</span>
+        </button>
+        <button type="button" class="info-chip" data-topic="area">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="info-ico">🌎</span>
+          <span class="info-label">면적</span>
+          <span class="info-val">남미에서 가장 큰 나라</span>
+        </button>
+        <button type="button" class="info-chip" data-topic="language">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="info-ico">🗣️</span>
+          <span class="info-label">언어</span>
+          <span class="info-val">포르투갈어</span>
+        </button>
+        <button type="button" class="info-chip" data-topic="currency">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="info-ico">💵</span>
+          <span class="info-label">화폐</span>
+          <span class="info-val">헤알 · 1헤알≈300원</span>
+        </button>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>SCROLL</span>
+        <div class="scroll-cue-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CARD 2 — 알고 보면 더 재미있는 브라질! -->
+  <!-- ============================================================ -->
+  <section class="card card--02" id="card-1" data-title="알고 보면 더 재미있는 브라질!" data-accent="coral">
+    <div class="bg-collage bg-collage--three">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1515694590185-73647ba02c10?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1629217855633-79a6925d6c47?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1742541922679-95cc82ba6c7d?q=65&w=900&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--dark"></div>
+
+    <div class="content content--wide">
+      <div class="section-head" data-reveal="fade">
+        <span class="badge-num">02</span>
+        <div>
+          <p class="eyebrow">FUN FACTS</p>
+          <h2 class="section-title">알고 보면<br class="mobile-only"> 더 재미있는 브라질!</h2>
+        </div>
+      </div>
+
+      <div class="fact-grid" data-reveal="stagger">
+        <button type="button" class="fact-card" data-topic="coffee">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">☕</span>
+          <h3>커피</h3>
+          <p>세계 최대의 커피 생산국이에요</p>
+        </button>
+        <button type="button" class="fact-card" data-topic="football">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">⚽</span>
+          <h3>축구</h3>
+          <p>월드컵 5회 우승, ‘축구의 나라’</p>
+        </button>
+        <button type="button" class="fact-card" data-topic="samba">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">💃</span>
+          <h3>삼바</h3>
+          <p>흥겨운 리듬의 브라질 대표 춤</p>
+        </button>
+        <button type="button" class="fact-card" data-topic="carnival">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🎭</span>
+          <h3>카니발</h3>
+          <p>매년 2월, 세계 최대 규모의 축제</p>
+        </button>
+        <button type="button" class="fact-card" data-topic="amazon">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🌳</span>
+          <h3>아마존</h3>
+          <p>‘지구의 허파’라 불리는 열대우림</p>
+        </button>
+        <button type="button" class="fact-card" data-topic="season">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🌍</span>
+          <h3>계절 반대</h3>
+          <p>한국이 여름이면 브라질은 겨울</p>
+        </button>
+        <button type="button" class="fact-card fact-card--warn" data-topic="safety">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🚨</span>
+          <h3>치안 주의</h3>
+          <p>소지품 관리와 야간 이동에 주의해요</p>
+        </button>
+        <button type="button" class="fact-card fact-card--warn" data-topic="gesture">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🙅</span>
+          <h3>손동작 주의</h3>
+          <p>OK 사인·V 사인이 무례하게 보일 수 있어요</p>
+        </button>
+        <button type="button" class="fact-card fact-card--warn" data-topic="hygiene">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <span class="fact-ico">🧼</span>
+          <h3>개인위생</h3>
+          <p>손 소독제 · 물티슈를 꼭 챙기세요</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CARD 3 — 알찬 3박 4일 핵심 일정 -->
+  <!-- ============================================================ -->
+  <section class="card card--03" id="card-2" data-title="알찬 3박 4일 핵심 일정" data-accent="teal">
+    <div class="bg-collage bg-collage--three">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1761701286125-4aaae1dd3065?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1556816214-6d16c62fbbf6?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?q=65&w=900&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--dark"></div>
+
+    <div class="content content--wide">
+      <div class="section-head" data-reveal="fade">
+        <span class="badge-num">03</span>
+        <div>
+          <p class="eyebrow">ITINERARY</p>
+          <h2 class="section-title">알찬 3박 4일<br class="mobile-only"> 핵심 일정</h2>
+        </div>
+      </div>
+
+      <ol class="timeline" data-reveal="stagger">
+        <li class="tl-item">
+          <div class="tl-dot">1</div>
+          <button type="button" class="tl-body" data-topic="park">
+            <span class="info-photo-badge" aria-hidden="true">📷</span>
+            <span class="tl-day">DAY 1</span>
+            <h3>🌿 과리타 주립공원</h3>
+            <p>화산암 절벽과 대서양이 맞닿은 절경을 트레킹하며 감상해요.</p>
+          </button>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot">2</div>
+          <button type="button" class="tl-body" data-topic="football">
+            <span class="info-photo-badge" aria-hidden="true">📷</span>
+            <span class="tl-day">DAY 2</span>
+            <h3>⚽ 브라질 축구 경기 관람</h3>
+            <p>현지 팬들과 함께 축구의 나라다운 열띤 응원 문화를 느껴봐요.</p>
+          </button>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot">3</div>
+          <button type="button" class="tl-body" data-topic="beach">
+            <span class="info-photo-badge" aria-hidden="true">📷</span>
+            <span class="tl-day">DAY 3</span>
+            <h3>🏖️ 과리타 해변</h3>
+            <p>남부 브라질에서 손꼽히는 아름다운 해변에서 여유를 즐겨요.</p>
+          </button>
+        </li>
+        <li class="tl-item">
+          <div class="tl-dot">4</div>
+          <button type="button" class="tl-body" data-topic="coffee">
+            <span class="info-photo-badge" aria-hidden="true">📷</span>
+            <span class="tl-day">DAY 4</span>
+            <h3>☕ 브라질 커피 &amp; 🛍️ 기념품 쇼핑</h3>
+            <p>커피 산지를 체험하고, 가족·친구를 위한 기념품을 준비해요.</p>
+          </button>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CARD 4 — 미식 가이드 -->
+  <!-- ============================================================ -->
+  <section class="card card--04" id="card-3" data-title="미식 & 쇼핑 가이드" data-accent="coral">
+    <div class="bg-collage bg-collage--two">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?q=65&w=1000&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1722962883780-8806c3ab546b?q=65&w=1000&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--dark"></div>
+
+    <div class="content content--wide">
+      <div class="section-head" data-reveal="fade">
+        <span class="badge-num">04</span>
+        <div>
+          <p class="eyebrow">FOOD GUIDE</p>
+          <h2 class="section-title">뭘 먹을까? 🍽️</h2>
+        </div>
+      </div>
+
+      <div class="food-grid" data-reveal="stagger">
+        <button type="button" class="food-card" data-topic="churrasco" style="--food-img:url('https://images.unsplash.com/photo-1558030006-450675393462?q=65&w=700&auto=format&fit=crop')">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo"></div>
+          <div class="food-info">
+            <h3>슈하스코 <span>Churrasco</span></h3>
+            <p>즉석에서 썰어주는 브라질식 꼬치 바비큐</p>
+          </div>
+        </button>
+        <button type="button" class="food-card" data-topic="coffee" style="--food-img:url('https://images.unsplash.com/photo-1722962883780-8806c3ab546b?q=65&w=700&auto=format&fit=crop')">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo"></div>
+          <div class="food-info">
+            <h3>브라질 커피 <span>Café</span></h3>
+            <p>진하고 향긋한 세계 1위 원두 커피</p>
+          </div>
+        </button>
+        <button type="button" class="food-card food-card--icon" data-topic="feijoada">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo food-photo--icon">🍲</div>
+          <div class="food-info">
+            <h3>페이조아다 <span>Feijoada</span></h3>
+            <p>검은콩과 고기를 푹 끓인 브라질 국민 스튜</p>
+          </div>
+        </button>
+        <button type="button" class="food-card food-card--icon" data-topic="pastel">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo food-photo--icon">🥟</div>
+          <div class="food-info">
+            <h3>파스텔 <span>Pastel</span></h3>
+            <p>고기·치즈를 채워 바삭하게 튀긴 길거리 간식</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="section-head section-head--sub" data-reveal="fade">
+        <span class="badge-num badge-num--sub">🛍️</span>
+        <div>
+          <p class="eyebrow">SHOPPING LIST</p>
+          <h2 class="section-title">뭘 살까? 🛍️</h2>
+        </div>
+      </div>
+
+      <div class="food-grid" data-reveal="stagger">
+        <button type="button" class="food-card" data-topic="coffeebeans" style="--food-img:url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=65&w=700&auto=format&fit=crop')">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo"></div>
+          <div class="food-info">
+            <h3>커피 원두 <span>Café em grão</span></h3>
+            <p>가족·친구에게 줄 최고의 선물, 브라질 원두</p>
+          </div>
+        </button>
+        <button type="button" class="food-card" data-topic="jersey" style="--food-img:url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=65&w=700&auto=format&fit=crop')">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo"></div>
+          <div class="food-info">
+            <h3>축구 유니폼 <span>Camisa</span></h3>
+            <p>노랑·초록 브라질 국가대표 유니폼</p>
+          </div>
+        </button>
+        <button type="button" class="food-card" data-topic="havaianas" style="--food-img:url('https://images.unsplash.com/photo-1603487742131-4160ec999306?q=65&w=700&auto=format&fit=crop')">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo"></div>
+          <div class="food-info">
+            <h3>하바이아나스 <span>Havaianas</span></h3>
+            <p>브라질에서 태어난 알록달록 고무 슬리퍼</p>
+          </div>
+        </button>
+        <button type="button" class="food-card food-card--icon" data-topic="gemstone">
+          <span class="info-photo-badge" aria-hidden="true">📷</span>
+          <div class="food-photo food-photo--icon">💎</div>
+          <div class="food-info">
+            <h3>브라질 보석 <span>Pedras</span></h3>
+            <p>자수정 등 브라질 특산 원석·보석 액세서리</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CARD 5 — 알뜰 예산 & 필수 꿀팁 -->
+  <!-- ============================================================ -->
+  <section class="card card--05" id="card-4" data-title="알뜰 예산 & 필수 꿀팁" data-accent="teal">
+    <div class="bg-collage bg-collage--one">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1637876308735-74230b34461a?q=65&w=1100&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--heavy"></div>
+
+    <div class="content content--wide">
+      <div class="section-head" data-reveal="fade">
+        <span class="badge-num">05</span>
+        <div>
+          <p class="eyebrow">BUDGET &amp; TIPS</p>
+          <h2 class="section-title">알뜰 예산 &amp;<br class="mobile-only"> 필수 꿀팁</h2>
+        </div>
+      </div>
+      <p class="hint-text" data-reveal="fade">체크하려면 카드를 누르고, 사진이 궁금하면 📷를 눌러보세요</p>
+
+      <ul class="checklist" data-reveal="stagger">
+        <li class="check-item">
+          <span class="check-ico">💵</span>
+          <div>
+            <h3>헤알 (Real)</h3>
+            <p>공항보다 시내 환전소·현지 ATM이 환율에 유리해요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="currency" aria-label="헤알 사진 보기">📷</button>
+        </li>
+        <li class="check-item">
+          <span class="check-ico">☀️</span>
+          <div>
+            <h3>선크림</h3>
+            <p>자외선이 강한 나라, SPF50+ 선크림은 필수예요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="sunscreen" aria-label="선크림 사진 보기">📷</button>
+        </li>
+        <li class="check-item">
+          <span class="check-ico">📱</span>
+          <div>
+            <h3>인터넷</h3>
+            <p>유심(eSIM)이나 포켓와이파이를 미리 준비하세요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="esim" aria-label="eSIM 사진 보기">📷</button>
+        </li>
+        <li class="check-item">
+          <span class="check-ico">🚕</span>
+          <div>
+            <h3>교통</h3>
+            <p>차량 호출 앱을 이용하면 더 안전하고 편리해요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="transport" aria-label="차량 호출 사진 보기">📷</button>
+        </li>
+        <li class="check-item">
+          <span class="check-ico">🚨</span>
+          <div>
+            <h3>안전</h3>
+            <p>귀중품 노출을 자제하고, 야간 단독 이동은 피해요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="safety" aria-label="안전 사진 보기">📷</button>
+        </li>
+        <li class="check-item">
+          <span class="check-ico">🧼</span>
+          <div>
+            <h3>개인위생</h3>
+            <p>손 소독제와 물티슈를 항상 휴대해요.</p>
+          </div>
+          <button type="button" class="info-photo-badge info-photo-badge--standalone" data-topic="hygiene" aria-label="개인위생 사진 보기">📷</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CARD 6 — 놀와 6-1반 브라질 팝업스토어 -->
+  <!-- ============================================================ -->
+  <section class="card card--06" id="card-5" data-title="놀와 6-1반 브라질 팝업스토어" data-accent="gold">
+    <div class="bg-collage bg-collage--three">
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1680442302920-6b5703538aa0?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1629217855633-79a6925d6c47?q=65&w=900&auto=format&fit=crop')"></div>
+      <div class="bg-img" style="background-image:url('https://images.unsplash.com/photo-1743443924554-9b7630c2ff46?q=65&w=900&auto=format&fit=crop')"></div>
+    </div>
+    <div class="scrim scrim--cover"></div>
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+    <div class="content content--cover">
+      <div class="stamp" data-reveal="zoom">
+        <svg viewBox="0 0 120 120" class="stamp-ring">
+          <path id="stampCirclePath2" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none"/>
+          <text><textPath href="#stampCirclePath2" startOffset="0%">OBRIGADO · 감사합니다 · OBRIGADO ·</textPath></text>
+        </svg>
+        <span class="stamp-center">🎉</span>
+      </div>
+
+      <p class="eyebrow" data-reveal="fade">놀와 6-1반 PRESENTS</p>
+      <h2 class="hero-title" data-reveal="text">
+        <span class="line">브라질</span>
+        <span class="line accent-text">팝업스토어</span>
+      </h2>
+      <p class="hero-sub" data-reveal="fade">삼바의 리듬 × 축구의 열기 × 브라질의 맛,<br class="mobile-only"> 그대로 담았어요</p>
+
+      <div class="chip-row" data-reveal="stagger">
+        <span class="pill-tag">💃 삼바</span>
+        <span class="pill-tag">⚽ 축구</span>
+        <span class="pill-tag">🎊 컨페티</span>
+        <span class="pill-tag">☕ 커피</span>
+      </div>
+
+      <button class="thanks-btn" id="thanksBtn" data-reveal="zoom">
+        <span>감사합니다!</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- INFO / PHOTO MODAL (재사용) -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="infoModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="modalCloseBtn" aria-label="닫기">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+
+    <div class="modal-media" id="modalMedia">
+      <div class="modal-loading" id="modalLoading">
+        <span class="modal-spinner" aria-hidden="true"></span>
+        <span>불러오는 중…</span>
+      </div>
+      <img id="modalImg" class="modal-img" alt="" hidden>
+      <iframe id="modalMap" class="modal-map" title="브라질 위치 지도" loading="lazy" hidden></iframe>
+    </div>
+
+    <div class="modal-body">
+      <h3 class="modal-title" id="modalTitle">&nbsp;</h3>
+      <p class="modal-desc" id="modalDesc"></p>
+      <a class="modal-source" id="modalSource" href="#" target="_blank" rel="noopener noreferrer" hidden>위키백과에서 더 보기 →</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
